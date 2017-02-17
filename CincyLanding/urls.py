@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^home/', include('home.urls')),
     url(r'^', base.as_view(), name='home'),
+    url(r'^portfolio/', include('portfolio.urls'))
 ]
