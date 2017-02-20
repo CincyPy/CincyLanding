@@ -19,8 +19,9 @@ from .views import *
 
 
 urlpatterns = [
-    url(r'^portfolio/', include('portfolio.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^portfolio/', include('portfolio.urls')),
     url(r'^home/', include('home.urls')),
-    url(r'^', base.as_view(), name='home')
+    url(r'^', base.as_view(), name='index')
 ]
+

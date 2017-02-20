@@ -1,7 +1,6 @@
-from django.shortcuts import render
 from django.views.generic import TemplateView
 # Create your views here.
 
 
-class IndexView(TemplateView):
+class PortfolioView(TemplateView):
     template_name = "portfolio/portfolio.html"
