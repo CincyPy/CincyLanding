@@ -14,3 +14,6 @@ Home for Cincinnati python group.
     * git clone <path to github project>
 * Install requirements:
     * pip install -r requirements
+* Create databases tables from models
+    * python manage.py makemigrations
+    * python manage.py migrate

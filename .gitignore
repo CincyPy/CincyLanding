@@ -88,6 +88,8 @@ ENV/
 # Rope project settings
 .ropeproject
 
-
 # Pycharm
 .idea/
+
+# Database files
+*.sqlite3
