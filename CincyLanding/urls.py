@@ -22,6 +22,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^portfolio/', include('portfolio.urls')),
     url(r'^home/', include('home.urls')),
-    url(r'^', base.as_view(), name='index')
+    url(r'^', base.as_view(), name='home')
 ]
 
