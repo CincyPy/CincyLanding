@@ -21,4 +21,3 @@ class UrlTest(TestCase):
     def test_admin_url(self):
         self.browser.get('http://localhost:8000/admin/')
         self.assertIn('admin', self.browser.title)
-

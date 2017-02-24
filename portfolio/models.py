@@ -21,4 +21,4 @@ class PortfolioItem(models.Model):
     github_link = models.URLField()
     trello_link = models.URLField()
     status = models.CharField(max_length=1, choices=STATUS_CHOICES)
-    packages = models.ForeignKey(Package, on_delete=models.CASCADE)
+    packages = models.ForeignKey(Package, on_delete=models.CASCADE, blank=True, null=True)
