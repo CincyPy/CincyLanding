@@ -14,6 +14,7 @@ class PortfolioAdmin(admin.ModelAdmin):
               'status',
               'packages'
               )
+    search_fields = ['project_description']
 
 @admin.register(Package)
 class PackageAdmin(admin.ModelAdmin):
