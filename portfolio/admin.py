@@ -14,3 +14,9 @@ class PortfolioAdmin(admin.ModelAdmin):
               'status',
               'packages'
               )
+
+@admin.register(Package)
+class PackageAdmin(admin.ModelAdmin):
+    fields = ('name',
+              'docs_link',
+              )
