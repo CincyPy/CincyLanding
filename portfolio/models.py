@@ -5,6 +5,8 @@ class Package(models.Model):
     name = models.CharField(max_length=100)
     docs_link = models.URLField()
 
+    def __str__(self):
+        return self.name
 
 class PortfolioItem(models.Model):
     STATUS_CHOICES = (
@@ -22,3 +24,6 @@ class PortfolioItem(models.Model):
     trello_link = models.URLField()
     status = models.CharField(max_length=1, choices=STATUS_CHOICES)
     packages = models.ForeignKey(Package, on_delete=models.CASCADE, blank=True, null=True)
+
+    def __str__(self):
+        return self.project_name
