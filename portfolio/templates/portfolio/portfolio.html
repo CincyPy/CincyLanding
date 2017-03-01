@@ -1,7 +1,11 @@
-{% extends "index.html" %}
-{% block header %}
-    Portfolio
-{% endblock %}
-{% block primary %}
-    Goes here
-{% endblock %}
+{{ object.project_name }}
+{{ object.project_description }}
+{{ object.picture }}
+<a href="{{ object.github_link }}">github</a>
+<a href="{{ object.trello_link }}">trello</a>
+{{ object.start_date }}
+{{ object.status }}
+{{ object.packages }}
+
+
+
