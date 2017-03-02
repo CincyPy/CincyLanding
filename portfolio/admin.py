@@ -5,6 +5,7 @@ from .models import PortfolioItem, Package
 @admin.register(PortfolioItem)
 class PortfolioAdmin(admin.ModelAdmin):
     fields = ('project_name',
+              'project_url',
               'project_description',
               'picture',
               'url',

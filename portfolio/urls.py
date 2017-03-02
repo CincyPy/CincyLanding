@@ -17,6 +17,8 @@ from django.conf.urls import url
 from .views import *
 
 urlpatterns = [
-    url(r'^$', PortfolioView.as_view(), name='portfolio')
+    url(r'^(?P<pk>[-\w]+)/$', PortfolioDetails.as_view(), name='portfolio-details'),
+    url(r'^$', PortfolioView.as_view(), name='portfolio'),
+
 ]
 

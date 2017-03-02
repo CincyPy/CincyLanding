@@ -14,8 +14,8 @@ class PortfolioItem(models.Model):
         ('A', 'Active'),
         ('C', 'Complete'),
     )
-
-    project_name = models.CharField(primary_key=True, max_length=100)
+    project_url = models.CharField(primary_key=True, max_length=20)
+    project_name = models.CharField(max_length=100)
     project_description = models.TextField()
     picture = models.ImageField()
     url = models.URLField()
