@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    {{ portfolio_details.me }}
-    <h2>here</h2>
-    {{ portfolio_details }}
-</body>
-</html>
+<p>{{ object.project_name }}</p>
+<p>{{ object.project_description }}</p>
+<p>{{ object.picture }}</p>
+<p><a href="{{ object.github_link }}">github</a></p>
+<p><a href="{{ object.trello_link }}">trello</a></p>
+<p>{{ object.start_date }}</p>
+<p>{{ object.status }}</p>
+<p>{{ object.packages }}</p>
