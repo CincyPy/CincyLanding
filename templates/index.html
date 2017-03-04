@@ -38,7 +38,7 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="/" onclick=$("#menu-close").click();>Start Bootstrap</a>
+                <a href="/" onclick=$("#menu-close").click();>CincyPy</a>
             </li>
             <li>
                 <a href="/home" onclick=$("#menu-close").click();>Home</a>
@@ -63,12 +63,13 @@
         <div class="text-vertical-center">
             <h1>
                 {% block header %}
-                Start Bootstrap
+                CincyPy
                 {% endblock %}
                 {% block primary %}
                 {% endblock %}
             </h1>
-            <h3>Free Bootstrap Themes &amp; Templates</h3>
+            <h3 class="">Welcome! We are a group that encourages the use of Python and Python related technologies in the
+                Cincinnati development scene.</h3>
             <br>
             <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
         </div>
@@ -180,7 +181,7 @@
                                     <div class="portfolio-item">
                                         {{ PortfolioItem.project_name }}
                                         <a href="/portfolio/{{ PortfolioItem.project_url }}/">
-                                            <img class="img-portfolio img-responsive" src="{% static 'img/portfolio-1.jpg' %}">
+                                            <img class="img-portfolio img-responsive" src="{{ PortfolioItem.picture }}">
                                         </a>
                                     </div>
                                 </div>
@@ -244,10 +245,10 @@
 
     <!-- Map -->
     <section id="contact" class="map">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3097.3214893987424!2d-84.51670668464436!3d39.07637427954349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8841b12e359df619%3A0x7e82602af6344fe1!2s321+W+12th+St%2C+Covington%2C+KY+41011!5e0!3m2!1sen!2sus!4v1488667506213"></iframe>
         <br />
         <small>
-            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+            <a href="https://www.google.com/maps?f=q&hl=en&q=321+W+12th+St.,+Covington,+KY,+us"></a>
         </small>
     </section>
 
@@ -256,10 +257,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Start Bootstrap</strong>
+                    <h4><strong>Forge - Center for Great Neighborhoods of Covington</strong>
                     </h4>
-                    <p>3481 Melrose Place
-                        <br>Beverly Hills, CA 90210</p>
+                    <p>321 W 12th St.
+                        <br>Covington, KY, 41011</p>
                     <ul class="list-unstyled">
                         <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
                         <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">name@example.com</a>
@@ -268,17 +269,14 @@
                     <br>
                     <ul class="list-inline">
                         <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                            <a href="https://www.meetup.com/CincyPy/"><i class="fa fa-meetup fa-fw fa-3x" aria-hidden="true"></i></a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
                         </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
-                        </li>
                     </ul>
                     <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
+                    <p class="text-muted">Copyright &copy; CincyPy 2017</p>
                 </div>
             </div>
         </div>

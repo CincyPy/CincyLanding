@@ -1,8 +1,74 @@
-<p>{{ object.project_name }}</p>
-<p>{{ object.project_description }}</p>
-<p>{{ object.picture }}</p>
-<p><a href="{{ object.github_link }}">github</a></p>
-<p><a href="{{ object.trello_link }}">trello</a></p>
-<p>{{ object.start_date }}</p>
-<p>{{ object.status }}</p>
-<p>{{ object.packages }}</p>
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Stylish Portfolio - Start Bootstrap Theme</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'css/stylish-portfolio.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    {% if object.project_name %}
+                        <H1 align="center">{{ object.project_name }}</H1>
+                    {% endif %}
+                        <hr class="small">
+                        <div class="row">
+
+                            {% if object.project_description %}
+                                <p>{{ object.project_description }}</p>
+                            {% endif %}
+                            {% if object.picture %}
+                                <img class="img-portfolio img-responsive" src="/{{ object.picture }}">
+                            {% endif %}
+                            {% if object.github_link %}
+                                <p><a href="{{ object.github_link }}">github</a></p>
+                            {% endif %}
+                            {% if object.trello_link %}
+                                <p><a href="{{ object.trello_link }}">trello</a></p>
+                            {% endif %}
+                            {% if object.start_date %}
+                                <p>{{ object.start_date }}</p>
+                            {% endif %}
+                            {% if object.status %}
+                                <p>{{ object.status }}</p>
+                            {% endif %}
+                            {% if object.packages %}
+                                <p>{{ object.packages }}</p>
+                            {% endif %}
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+
+</body>

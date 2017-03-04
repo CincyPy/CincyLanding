@@ -17,7 +17,7 @@ class PortfolioItem(models.Model):
     project_url = models.CharField(primary_key=True, max_length=20)
     project_name = models.CharField(max_length=100)
     project_description = models.TextField()
-    picture = models.ImageField()
+    picture = models.ImageField(upload_to= './static/img/')
     url = models.URLField()
     start_date = models.DateField()
     github_link = models.URLField()
