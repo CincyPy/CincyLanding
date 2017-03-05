@@ -12,7 +12,7 @@ class UrlTest(TestCase):
 
     def test_home_url(self):
         self.browser.get('http://localhost:8000/home/')
-        self.assertIn('Start', self.browser.title)
+        self.assertIn('CincyPy', self.browser.title)
 
     def test_portfolio_url(self):
         self.browser.get('http://localhost:8000/portfolio/')

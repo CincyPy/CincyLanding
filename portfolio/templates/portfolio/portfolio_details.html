@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Stylish Portfolio - Start Bootstrap Theme</title>
+    <title>CincyPy Landing Page</title>
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
@@ -31,10 +31,24 @@
 </head>
 
 <body>
+<!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="/" onclick=$("#menu-close").click();>CincyPy</a>
+            </li>
+            <li>
+                <a href="/home" onclick=$("#menu-close").click();>Home</a>
+            </li>
+        </ul>
+    </nav>
+
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
+                <div class="col-lg-8 col-lg-offset-1 text-center">
                     {% if object.project_name %}
                         <H1 align="center">{{ object.project_name }}</H1>
                     {% endif %}
@@ -48,16 +62,23 @@
                                 <img class="img-portfolio img-responsive" src="/{{ object.picture }}">
                             {% endif %}
                             {% if object.github_link %}
-                                <p><a href="{{ object.github_link }}">github</a></p>
+                                <p><a href="{{ object.github_link }}"><i class="fa fa-github fa-fw fa-3x"></i></a>
                             {% endif %}
                             {% if object.trello_link %}
-                                <p><a href="{{ object.trello_link }}">trello</a></p>
+                                <a href="{{ object.trello_link }}"><i class="fa fa-trello fa-fw fa-3x"></i></a>
+                                </p>
                             {% endif %}
                             {% if object.start_date %}
                                 <p>{{ object.start_date }}</p>
                             {% endif %}
                             {% if object.status %}
-                                <p>{{ object.status }}</p>
+                                {% if object.status == 'A' %}
+                                    <p>This project is Active. We can use your help!</p>
+                                {% elif object.status == 'C' %}
+                                    <p>This project is completed!</p>
+                                {% else %}
+                                    <p>We are in the design phase, this is a great time to join us and learn some Python!</p>
+                                {% endif %}
                             {% endif %}
                             {% if object.packages %}
                                 <p>{{ object.packages }}</p>
@@ -72,3 +93,4 @@
 
 
 </body>
+
