@@ -1,12 +1,96 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CincyPy Landing Page</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'css/stylish-portfolio.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
+
 <body>
-    {{ portfolio_details.me }}
-    <h2>here</h2>
-    {{ portfolio_details }}
+<!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="/" onclick=$("#menu-close").click();>CincyPy</a>
+            </li>
+            <li>
+                <a href="/home" onclick=$("#menu-close").click();>Home</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-1 text-center">
+                    {% if object.project_name %}
+                        <H1 align="center">{{ object.project_name }}</H1>
+                    {% endif %}
+                        <hr class="small">
+                        <div class="row">
+
+                            {% if object.project_description %}
+                                <p>{{ object.project_description }}</p>
+                            {% endif %}
+                            {% if object.picture %}
+                                <img class="img-portfolio img-responsive" src="/{{ object.picture }}">
+                            {% endif %}
+                            {% if object.github_link %}
+                                <p><a href="{{ object.github_link }}"><i class="fa fa-github fa-fw fa-3x"></i></a>
+                            {% endif %}
+                            {% if object.trello_link %}
+                                <a href="{{ object.trello_link }}"><i class="fa fa-trello fa-fw fa-3x"></i></a>
+                                </p>
+                            {% endif %}
+                            {% if object.start_date %}
+                                <p>{{ object.start_date }}</p>
+                            {% endif %}
+                            {% if object.status %}
+                                {% if object.status == 'A' %}
+                                    <p>This project is Active. We can use your help!</p>
+                                {% elif object.status == 'C' %}
+                                    <p>This project is completed!</p>
+                                {% else %}
+                                    <p>We are in the design phase, this is a great time to join us and learn some Python!</p>
+                                {% endif %}
+                            {% endif %}
+                            {% if object.packages %}
+                                <p>{{ object.packages }}</p>
+                            {% endif %}
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+
 </body>
-</html>
+
