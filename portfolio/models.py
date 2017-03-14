@@ -17,12 +17,12 @@ class PortfolioItem(models.Model):
     project_url = models.CharField(primary_key=True, max_length=20)
     project_name = models.CharField(max_length=100)
     project_description = models.TextField()
-    picture = models.ImageField(upload_to= './static/img/')
-    url = models.URLField()
-    start_date = models.DateField()
-    github_link = models.URLField()
-    trello_link = models.URLField()
-    status = models.CharField(max_length=1, choices=STATUS_CHOICES)
+    picture = models.ImageField(blank=True, null=True)
+    url = models.URLField(blank=True, null=True)
+    start_date = models.DateField(blank=True, null=True)
+    github_link = models.URLField(blank=True, null=True)
+    trello_link = models.URLField(blank=True, null=True)
+    status = models.CharField(max_length=1, choices=STATUS_CHOICES, blank=True, null=True)
     packages = models.ForeignKey(Package, on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
