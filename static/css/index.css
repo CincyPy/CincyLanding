@@ -1,0 +1,13 @@
+.text-bottom_right {
+    position:absolute;
+    bottom:0;
+    right:0;
+    color: ivory;
+    font-size: 75%;
+}
+
+.slack {
+    margin-top: 45px;
+    background-color: whitesmoke;
+    border: none;
+}
