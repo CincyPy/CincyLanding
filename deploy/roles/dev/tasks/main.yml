@@ -1,0 +1,6 @@
+###
+# configures prod specifi server elements
+##
+
+- include: nginx.yml
+

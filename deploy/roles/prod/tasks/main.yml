@@ -1,0 +1,7 @@
+###
+# configures prod specifi server elements
+##
+
+- include: letsencrypt.yml
+- include: nginx.yml
+- include: production.yml
