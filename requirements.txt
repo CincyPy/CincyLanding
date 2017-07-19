@@ -2,7 +2,7 @@ ansible==2.3.0.0
 appdirs==1.4.0
 asn1crypto==0.22.0
 cffi==1.10.0
-cryptography==1.8.2
+cryptography>=1.8.2
 Django==1.10.5
 gunicorn==19.7.1
 idna==2.5

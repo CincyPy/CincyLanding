@@ -1,0 +1,9 @@
+###
+# This playbook deploys the CincyLanding Page app
+###
+- name: apply standard configuration to server
+  hosts: common
+  user: deploy
+  roles:
+    - common
+    - prod

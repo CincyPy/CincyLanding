@@ -1,0 +1,28 @@
+upstream app_server_wsgiapp {
+  server localhost:{{ wsgi_server_port }} fail_timeout=0;
+}
+
+server {
+  listen 80;
+  server_name 67.207.86.203;
+
+  # nginx serve up static files and never send to the WSGI server
+  location /static {
+    autoindex on;
+    alias /home/deploy/static/;
+  }
+
+  location /media {
+    autoindex on;
+    alias /home/deploy/media/;
+  }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:{{ app_dir }}/{{ app_name }}.sock;
+    }
+
+
+
+}
+

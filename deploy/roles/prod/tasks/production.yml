@@ -1,0 +1,10 @@
+###
+# copy production settings from local machine to server
+###
+
+- copy:
+    src: /path/to/production.py   # on your local machine
+    dest: /home/deploy/CincyLanding/CincyLanding/settings.py
+    owner: deploy
+    group: deployers
+    mode: 0644
