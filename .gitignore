@@ -93,3 +93,7 @@ ENV/
 
 # Database files
 *.sqlite3
+
+# Temporary static file directories for dev
+mediaroot/
+staticroot/
