@@ -127,4 +127,4 @@ STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesSto
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticroot')    # Setting for development
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'mediaroot')    # Setting for development
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media', 'static', 'img')    # Setting for development
