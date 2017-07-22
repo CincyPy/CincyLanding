@@ -94,8 +94,8 @@
                                     <div class="col-md-6">
                                         <div class="portfolio-item">
                                             <h3>{{ PortfolioItem.project_name }}</h3>
-                                            <a href="/portfolio/{{ PortfolioItem.project_url }}/">
-                                                <img class="img-portfolio img-responsive" src="/media/{{ PortfolioItem.picture }}">
+                                            <a href="{% url 'portfolio' %}{{ PortfolioItem.project_url }}/">
+                                                <img class="img-portfolio img-responsive" src="/{{ PortfolioItem.picture }}">
                                             </a>
                                         </div>
                                     </div>
