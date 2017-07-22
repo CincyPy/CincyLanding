@@ -56,7 +56,7 @@
                                 <p>{{ object.project_description }}</p>
                             {% endif %}
                             {% if object.picture %}
-                                <img class="img-portfolio img-responsive" src="/media/{{ object.picture }}">
+                                <img class="img-portfolio img-responsive" src="/{{ object.picture }}">
                             {% endif %}
                             {% if object.github_link %}
                                 <p><a href="{{ object.github_link }}"><i class="fa fa-github fa-fw fa-3x"></i></a>
