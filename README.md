@@ -2,10 +2,12 @@
 ## Purpose
 Home for Cincinnati python group.
 
-## Planned Features
+## Current Features
 * click to be added to slack.
 * how to connect and contribute (links to meetup, github, trello, etc.)
 * show off portfolio
+
+## Planned Features
 * spotlight new meetups, members, or something shiny we made.
 
 ## Cloning this project
