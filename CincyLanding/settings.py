@@ -25,7 +25,7 @@ SECRET_KEY = 'A_SECRET_KEY'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['67.207.86.203']
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -124,8 +124,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticroot')    # Setting for development
 
-STATIC_ROOT = '/home/deploy/static/'
-
-MEDIA_ROOT='/home/deploy/media/'
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'mediaroot')    # Setting for development
