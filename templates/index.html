@@ -95,7 +95,7 @@
                                         <div class="portfolio-item">
                                             <h3>{{ PortfolioItem.project_name }}</h3>
                                             <a href="{% url 'portfolio' %}{{ PortfolioItem.project_url }}/">
-                                                <img class="img-portfolio img-responsive" src="/{{ PortfolioItem.picture }}">
+                                                <img class="img-portfolio img-responsive" src="{% get_media_prefix %}{{ PortfolioItem.picture }}">
                                             </a>
                                         </div>
                                     </div>
