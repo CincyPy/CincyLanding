@@ -1,0 +1,14 @@
+###
+# copy production settings from local machine to server
+###
+
+- name: delete settings.py that has local development settings
+  file: path={{ app_dir }}/{{ app_name }}/settings.py state=absent
+  become: true
+
+
+
+- name: create new settings.py including ip address
+  template: src=settings.py.j2
+            dest={{app_dir}}/{{ app_name }}/settings.py
+  become: true
