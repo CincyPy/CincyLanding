@@ -2,6 +2,7 @@ deploy_group: deployers
 deploy_user: deploy
 ssh_dir: "/path/to/.ssh/"
 ssh_key_name: "key_name"
+ip_addr: "174.138.34.30"
 
 fqdn: "www.yourdomainhere.com"
 web_serve_dir: "/var/www/html"

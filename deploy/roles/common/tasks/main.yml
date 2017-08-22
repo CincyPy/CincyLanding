@@ -4,5 +4,4 @@
 - include: ubuntu.yml
 - include: git.yml
 - include: dependencies.yml
-- include: django.yml
-- include: wsgi.yml
+

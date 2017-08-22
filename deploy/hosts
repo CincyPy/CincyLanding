@@ -1,5 +1,5 @@
 [common]
-67.207.86.203 ansible_python_interpreter=/usr/bin/python3
+174.138.34.30 ansible_python_interpreter=/usr/bin/python3
 
 [init_config]
-67.207.86.203 ansible_python_interpreter=/usr/bin/python3
+174.138.34.30 ansible_python_interpreter=/usr/bin/python3

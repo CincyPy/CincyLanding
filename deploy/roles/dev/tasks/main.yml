@@ -3,4 +3,6 @@
 ##
 
 - include: nginx.yml
-
+- include: development.yml
+- include: django.yml
+- include: wsgi.yml

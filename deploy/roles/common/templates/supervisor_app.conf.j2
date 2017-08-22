@@ -1,7 +1,0 @@
-[program:{{ app_name }}]
-command=/home/deploy/venv/bin/gunicorn --workers 3 --bind unix:/home/deploy/CincyLanding/CincyLanding.sock CincyLanding.wsgi
-directory={{ sub_app_dir }}
-user={{ deploy_user }}
-autostart=true
-autorestart=true
-redirect_stderr=True
