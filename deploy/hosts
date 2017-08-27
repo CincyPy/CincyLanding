@@ -5,4 +5,5 @@
 174.138.34.30 ansible_python_interpreter=/usr/bin/python3
 
 [create_superuser]
-104.131.44.184 ansible_python_interpreter=/usr/bin/python3
+174.138.34.30 ansible_python_interpreter=/usr/bin/python3
+
