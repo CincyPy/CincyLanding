@@ -1,0 +1,10 @@
+###
+# create superuser for Django App
+###
+
+
+# Create an initial superuser.
+- django_manage:
+    command: "createsuperuser --noinput --username=your_name --email=usersemail@something.com"
+    app_path: "{{ app_dir }}"
+    virtualenv: "{{ venv_dir }}"
