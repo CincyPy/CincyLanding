@@ -206,7 +206,17 @@ hr.small {
     margin: 0 auto;
 }
 
+
 .img-portfolio:hover {
+    opacity: 0.8;
+}
+
+
+.img-sponsor {
+    padding: 20px;
+}
+
+.img-sponsor:hover {
     opacity: 0.8;
 }
 
@@ -239,7 +249,7 @@ hr.small {
 /* Footer */
 
 footer {
-    padding: 100px 0;
+    padding: 20px;
 
 }
 
